@@ -4,9 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Fantasy Football Site</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>My Fantasy Football Site</h1>
-  <p>If you can see this, step 4 worked.</p>
+  <header>
+    <h1>My Fantasy Football Site</h1>
+    <p>If you can see this, step 4 worked. Now we are building the dashboard.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>League Standings</h2>
+      <div id="standings">Loading standings...</div>
+    </section>
+
+    <section class="card">
+      <h2>Points Chart</h2>
+      <canvas id="pointsChart"></canvas>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
