@@ -1,19 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Shiva History Dashboard</title>
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiva Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <p class="eyebrow">ESPN Fantasy Football</p>
-      <h1>The Shiva History Dashboard</h1>
-      <p class="subtitle">All-time stats, season-by-season results, and league scoring history.</p>
+      <p class="eyebrow">Fantasy Football Dashboard</p>
+      <h1>Shiva</h1>
+      <p class="subtitle">
+        League history, standings, yearly results, and all-time head-to-head matchup history.
+      </p>
     </div>
   </header>
 
@@ -21,40 +22,333 @@
     <section class="panel trophy-panel">
       <div class="panel-header">
         <div>
-          <p class="panel-kicker">Legacy</p>
-          <h2>All-Time Standings</h2>
+          <p class="panel-kicker">League records</p>
+          <h2>All Time Standings</h2>
         </div>
       </div>
-      <div id="allTimeStandings">Loading...</div>
+
+      <ol>
+        <li><strong>Replace this list</strong> with your real all-time standings.</li>
+        <li>Example: Shiva — 102-58</li>
+        <li>Example: Dak — 97-63</li>
+        <li>Example: Ty — 94-66</li>
+      </ol>
     </section>
 
     <section class="panel cowboys-panel">
       <div class="panel-header">
         <div>
-          <p class="panel-kicker">Season View</p>
+          <p class="panel-kicker">Season view</p>
           <h2>Yearly Standings</h2>
         </div>
+
         <div class="select-wrap">
-          <label for="yearSelect">Season</label>
-          <select id="yearSelect"></select>
+          <label for="seasonSelect">Season</label>
+          <select id="seasonSelect">
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+          </select>
         </div>
       </div>
-      <div id="yearStandings">Loading...</div>
+
+      <ol>
+        <li><strong>Replace this list</strong> with your selected season standings.</li>
+        <li>Example: 1. Shiva</li>
+        <li>Example: 2. Dak</li>
+        <li>Example: 3. Ty</li>
+      </ol>
     </section>
 
     <section class="panel chart-panel">
       <div class="panel-header">
         <div>
-          <p class="panel-kicker">Scoring History</p>
-          <h2>All-Time Points For</h2>
+          <p class="panel-kicker">Visual trends</p>
+          <h2>League Chart</h2>
         </div>
       </div>
+
       <div class="chart-wrap">
-        <canvas id="allTimeChart"></canvas>
+        <canvas id="leagueChart"></canvas>
+      </div>
+    </section>
+
+    <section class="panel headtohead-panel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-kicker">Matchup history</p>
+          <h2>All-Time Head-to-Head</h2>
+        </div>
+      </div>
+
+      <div class="headtohead-controls">
+        <div class="filter-group">
+          <label for="teamASelect">Team A</label>
+          <select id="teamASelect">
+            <option value="">Select Team A</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="teamBSelect">Team B</label>
+          <select id="teamBSelect">
+            <option value="">Select Team B</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="yearFilter">Year</label>
+          <select id="yearFilter">
+            <option value="all">All Years</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="headtohead-summary">
+        <div class="summary-card">
+          <span class="summary-label">Record</span>
+          <strong id="recordText">Select two teams</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Points</span>
+          <strong id="pointsText">--</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Average Margin</span>
+          <strong id="marginText">--</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Last Meeting</span>
+          <strong id="lastMeetingText">--</strong>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="matchup-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Week</th>
+              <th>Matchup</th>
+              <th>Score</th>
+              <th>Winner</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody id="matchupTableBody">
+            <tr>
+              <td colspan="6">Loading head-to-head data...</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <script>
+    const ctx = document.getElementById("leagueChart");
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Shiva", "Dak", "Ty"],
+        datasets: [{
+          label: "Example Wins",
+          data: [102, 97, 94],
+          backgroundColor: [
+            "rgba(125, 211, 252, 0.65)",
+            "rgba(251, 191, 36, 0.65)",
+            "rgba(74, 222, 128, 0.65)"
+          ],
+          borderColor: [
+            "rgba(125, 211, 252, 1)",
+            "rgba(251, 191, 36, 1)",
+            "rgba(74, 222, 128, 1)"
+          ],
+          borderWidth: 1.5
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: {
+              color: "#f8fafc"
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: "#f8fafc" },
+            grid: { color: "rgba(255,255,255,0.08)" }
+          },
+          y: {
+            beginAtZero: true,
+            ticks: { color: "#f8fafc" },
+            grid: { color: "rgba(255,255,255,0.08)" }
+          }
+        }
+      }
+    });
+
+    let headToHeadData = [];
+
+    const teamASelect = document.getElementById("teamASelect");
+    const teamBSelect = document.getElementById("teamBSelect");
+    const yearFilter = document.getElementById("yearFilter");
+    const matchupTableBody = document.getElementById("matchupTableBody");
+
+    const recordText = document.getElementById("recordText");
+    const pointsText = document.getElementById("pointsText");
+    const marginText = document.getElementById("marginText");
+    const lastMeetingText = document.getElementById("lastMeetingText");
+
+    async function loadHeadToHeadData() {
+      try {
+        const response = await fetch("./headtohead.json");
+        headToHeadData = await response.json();
+
+        populateTeamDropdowns(headToHeadData);
+        populateYearDropdown(headToHeadData);
+        renderHeadToHead();
+      } catch (error) {
+        matchupTableBody.innerHTML = `
+          <tr>
+            <td colspan="6">Could not load head-to-head data.</td>
+          </tr>
+        `;
+      }
+    }
+
+    function populateTeamDropdowns(data) {
+      const teams = [...new Set(data.flatMap(game => [game.team1, game.team2]))].sort();
+
+      teams.forEach(team => {
+        const optionA = document.createElement("option");
+        optionA.value = team;
+        optionA.textContent = team;
+        teamASelect.appendChild(optionA);
+
+        const optionB = document.createElement("option");
+        optionB.value = team;
+        optionB.textContent = team;
+        teamBSelect.appendChild(optionB);
+      });
+    }
+
+    function populateYearDropdown(data) {
+      const years = [...new Set(data.map(game => game.year))].sort((a, b) => b - a);
+
+      years.forEach(year => {
+        const option = document.createElement("option");
+        option.value = year;
+        option.textContent = year;
+        yearFilter.appendChild(option);
+      });
+    }
+
+    function getFilteredGames() {
+      const teamA = teamASelect.value;
+      const teamB = teamBSelect.value;
+      const selectedYear = yearFilter.value;
+
+      return headToHeadData.filter(game => {
+        const sameMatchup =
+          teamA &&
+          teamB &&
+          (
+            (game.team1 === teamA && game.team2 === teamB) ||
+            (game.team1 === teamB && game.team2 === teamA)
+          );
+
+        const yearMatch =
+          selectedYear === "all" || String(game.year) === String(selectedYear);
+
+        return sameMatchup && yearMatch;
+      }).sort((a, b) => {
+        if (b.year !== a.year) return b.year - a.year;
+        return b.week - a.week;
+      });
+    }
+
+    function renderHeadToHead() {
+      const teamA = teamASelect.value;
+      const teamB = teamBSelect.value;
+
+      if (!teamA || !teamB || teamA === teamB) {
+        recordText.textContent = "Select two different teams";
+        pointsText.textContent = "--";
+        marginText.textContent = "--";
+        lastMeetingText.textContent = "--";
+        matchupTableBody.innerHTML = `
+          <tr>
+            <td colspan="6">Choose two different teams to view matchup history.</td>
+          </tr>
+        `;
+        return;
+      }
+
+      const games = getFilteredGames();
+
+      if (!games.length) {
+        recordText.textContent = `${teamA} vs ${teamB}`;
+        pointsText.textContent = "No games found";
+        marginText.textContent = "--";
+        lastMeetingText.textContent = "--";
+        matchupTableBody.innerHTML = `
+          <tr>
+            <td colspan="6">No games found for this matchup and filter.</td>
+          </tr>
+        `;
+        return;
+      }
+
+      let teamAWins = 0;
+      let teamBWins = 0;
+      let teamAPoints = 0;
+      let teamBPoints = 0;
+      let totalMargin = 0;
+
+      games.forEach(game => {
+        const scoreA = game.team1 === teamA ? game.team1Score : game.team2Score;
+        const scoreB = game.team1 === teamA ? game.team2Score : game.team1Score;
+
+        teamAPoints += scoreA;
+        teamBPoints += scoreB;
+        totalMargin += Math.abs(scoreA - scoreB);
+
+        if (game.winner === teamA) {
+          teamAWins++;
+        } else if (game.winner === teamB) {
+          teamBWins++;
+        }
+      });
+
+      const lastGame = games[0];
+
+      recordText.textContent = `${teamA} ${teamAWins}-${teamBWins} ${teamB}`;
+      pointsText.textContent = `${teamA}: ${teamAPoints.toFixed(1)} | ${teamB}: ${teamBPoints.toFixed(1)}`;
+      marginText.textContent = `${(totalMargin / games.length).toFixed(1)} pts`;
+      lastMeetingText.textContent = `${lastGame.year} Week ${lastGame.week} — ${lastGame.winner}`;
+
+      matchupTableBody.innerHTML = games.map(game => `
+        <tr>
+          <td>${game.year}</td>
+          <td>${game.week}</td>
+          <td>${game.team1} vs ${game.team2}</td>
+          <td>${game.team1Score.toFixed(1)} - ${game.team2Score.toFixed(1)}</td>
+          <td>${game.winner}</td>
+          <td>${game.playoff ? "Playoffs" : "Regular"}</td>
+        </tr>
+      `).join("");
+    }
+
+    teamASelect.addEventListener("change", renderHeadToHead);
+    teamBSelect.addEventListener("change", renderHeadToHead);
+    yearFilter.addEventListener("change", renderHeadToHead);
+
+    loadHeadToHeadData();
+  </script>
 </body>
 </html>
