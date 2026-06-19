@@ -22,10 +22,10 @@ Promise.all([
     const allTimeHtml = sortedAllTime
       .map(team => `
         <li>
-          <strong>${team.managerName}</strong> —
-          ${team.totalWins}-${team.totalLosses}-${team.totalTies}
-          | ${Number(team.totalPointsFor || 0).toFixed(1)} PF
-          | ${team.seasons} seasons
+          <strong>${team.managerName}</strong><br>
+          ${team.totalWins}-${team.totalLosses}-${team.totalTies} record •
+          ${Number(team.totalPointsFor || 0).toFixed(1)} points for •
+          ${team.seasons} seasons
         </li>
       `)
       .join("");
@@ -39,24 +39,38 @@ Promise.all([
         datasets: [{
           label: "All-Time Points For",
           data: sortedAllTime.map(team => team.totalPointsFor),
-          backgroundColor: "#3b82f6"
+          backgroundColor: "rgba(56, 189, 248, 0.75)",
+          borderColor: "rgba(125, 211, 252, 1)",
+          borderWidth: 1.5,
+          borderRadius: 10
         }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: {
-            labels: { color: "white" }
+            labels: { color: "#e2e8f0" }
           }
         },
         scales: {
           x: {
-            ticks: { color: "#d1d5db" },
-            grid: { color: "rgba(255,255,255,0.08)" }
+            ticks: {
+              color: "#cbd5e1",
+              maxRotation: 0,
+              minRotation: 0
+            },
+            grid: {
+              color: "rgba(255,255,255,0.05)"
+            }
           },
           y: {
-            ticks: { color: "#d1d5db" },
-            grid: { color: "rgba(255,255,255,0.08)" }
+            ticks: {
+              color: "#cbd5e1"
+            },
+            grid: {
+              color: "rgba(255,255,255,0.08)"
+            }
           }
         }
       }
@@ -81,11 +95,12 @@ Promise.all([
       const html = teamsForYear
         .map(team => `
           <li>
-            <strong>${team.managerName}</strong> (${team.teamName}) —
-            ${team.wins}-${team.losses}-${team.ties}
-            | ${Number(team.pointsFor || 0).toFixed(1)} PF
-            | ${Number(team.pointsAgainst || 0).toFixed(1)} PA
-            | Final Rank: ${team.finalRank ?? "N/A"}
+            <strong>${team.managerName}</strong><br>
+            <span>${team.teamName}</span><br>
+            ${team.wins}-${team.losses}-${team.ties} record •
+            ${Number(team.pointsFor || 0).toFixed(1)} PF •
+            ${Number(team.pointsAgainst || 0).toFixed(1)} PA •
+            Final Rank: ${team.finalRank ?? "N/A"}
           </li>
         `)
         .join("");
