@@ -73,6 +73,8 @@ body {
 }
 
 .panel {
+  position: relative;
+  overflow: hidden;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -81,40 +83,53 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.field-panel {
-  position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(rgba(7, 45, 25, 0.82), rgba(5, 35, 20, 0.9)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.04) 0,
-      rgba(255, 255, 255, 0.04) 54px,
-      rgba(255, 255, 255, 0.01) 54px,
-      rgba(255, 255, 255, 0.01) 108px
-    );
-}
-
-.field-panel::before {
+.panel::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to right, transparent 7%, rgba(255, 255, 255, 0.22) 7.3%, transparent 7.6%),
-    linear-gradient(to right, transparent 19%, rgba(255, 255, 255, 0.12) 19.2%, transparent 19.4%),
-    linear-gradient(to right, transparent 31%, rgba(255, 255, 255, 0.12) 31.2%, transparent 31.4%),
-    linear-gradient(to right, transparent 43%, rgba(255, 255, 255, 0.12) 43.2%, transparent 43.4%),
-    linear-gradient(to right, transparent 55%, rgba(255, 255, 255, 0.12) 55.2%, transparent 55.4%),
-    linear-gradient(to right, transparent 67%, rgba(255, 255, 255, 0.12) 67.2%, transparent 67.4%),
-    linear-gradient(to right, transparent 79%, rgba(255, 255, 255, 0.12) 79.2%, transparent 79.4%),
-    linear-gradient(to right, transparent 91%, rgba(255, 255, 255, 0.22) 91.3%, transparent 91.6%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.18;
   pointer-events: none;
-  opacity: 0.8;
 }
 
-.field-panel > * {
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 10, 18, 0.62), rgba(6, 10, 18, 0.82));
+  pointer-events: none;
+}
+
+.panel > * {
   position: relative;
   z-index: 1;
+}
+
+.trophy-panel::before {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Vince_Lombardi_Trophy_at_the_White_House.jpg/1280px-Vince_Lombardi_Trophy_at_the_White_House.jpg");
+  opacity: 0.16;
+}
+
+.cowboys-panel::before {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/AT%26T_Stadium_field.jpg/1280px-AT%26T_Stadium_field.jpg");
+  opacity: 0.22;
+}
+
+.chart-panel {
+  grid-column: 1 / -1;
+  background: var(--panel-2);
+}
+
+.chart-panel::before {
+  background-image: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(34, 197, 94, 0.06));
+  opacity: 1;
+  background-size: cover;
+}
+
+.chart-panel::after {
+  background: linear-gradient(180deg, rgba(9, 17, 31, 0.4), rgba(9, 17, 31, 0.65));
 }
 
 .panel-header {
@@ -170,11 +185,6 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
 }
 
-.chart-panel {
-  grid-column: 1 / -1;
-  background: var(--panel-2);
-}
-
 .chart-wrap {
   position: relative;
   height: 420px;
@@ -188,10 +198,10 @@ ol {
 
 li {
   margin-bottom: 14px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0 0 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   line-height: 1.55;
-  color: #e2e8f0;
+  color: #f1f5f9;
 }
 
 li:last-child {
