@@ -3,8 +3,17 @@ Promise.all([
   fetch("all-seasons.json").then(response => response.json())
 ])
   .then(([summaryData, seasonsData]) => {
-    const allTimeTeams = summaryData.teams;
-    const allSeasonRows = seasonsData.seasons;
+    const allTimeStandings = document.getElementById("allTimeStandings");
+    const allTimeChart = document.getElementById("allTimeChart");
+    const yearSelect = document.getElementById("yearSelect");
+    const yearStandings = document.getElementById("yearStandings");
+
+    if (!allTimeStandings || !allTimeChart || !yearSelect || !yearStandings) {
+      throw new Error("One or more HTML elements are missing.");
+    }
+
+    const allTimeTeams = summaryData.teams || [];
+    const allSeasonRows = seasonsData.seasons || [];
 
     const sortedAllTime = [...allTimeTeams].sort(
       (a, b) => b.totalWins - a.totalWins || b.totalPointsFor - a.totalPointsFor
@@ -15,17 +24,15 @@ Promise.all([
         <li>
           <strong>${team.name}</strong> —
           ${team.totalWins}-${team.totalLosses}-${team.totalTies}
-          | ${team.totalPointsFor.toFixed(1)} PF
+          | ${Number(team.totalPointsFor || 0).toFixed(1)} PF
           | ${team.seasons} seasons
         </li>
       `)
       .join("");
 
-    document.getElementById("allTimeStandings").innerHTML = `<ol>${allTimeHtml}</ol>`;
+    allTimeStandings.innerHTML = `<ol>${allTimeHtml}</ol>`;
 
-    const ctx = document.getElementById("allTimeChart");
-
-    new Chart(ctx, {
+    new Chart(allTimeChart, {
       type: "bar",
       data: {
         labels: sortedAllTime.map(team => team.name),
@@ -53,11 +60,9 @@ Promise.all([
       }
     });
 
-    const yearSelect = document.getElementById("yearSelect");
-    const yearStandings = document.getElementById("yearStandings");
-
     const years = [...new Set(allSeasonRows.map(row => row.year))].sort((a, b) => b - a);
 
+    yearSelect.innerHTML = "";
     years.forEach(year => {
       const option = document.createElement("option");
       option.value = year;
@@ -75,8 +80,8 @@ Promise.all([
           <li>
             <strong>${team.name}</strong> —
             ${team.wins}-${team.losses}-${team.ties}
-            | ${team.pointsFor.toFixed(1)} PF
-            | ${team.pointsAgainst.toFixed(1)} PA
+            | ${Number(team.pointsFor || 0).toFixed(1)} PF
+            | ${Number(team.pointsAgainst || 0).toFixed(1)} PA
             | Final Rank: ${team.finalRank ?? "N/A"}
           </li>
         `)
@@ -92,10 +97,19 @@ Promise.all([
     if (years.length > 0) {
       yearSelect.value = years[0];
       renderYear(years[0]);
+    } else {
+      yearStandings.innerHTML = "No yearly data found.";
     }
   })
   .catch(error => {
-    document.getElementById("allTimeStandings").innerHTML = "Could not load league history.";
-    document.getElementById("yearStandings").innerHTML = "Could not load league history.";
     console.error(error);
+    const allTimeStandings = document.getElementById("allTimeStandings");
+    const yearStandings = document.getElementById("yearStandings");
+
+    if (allTimeStandings) {
+      allTimeStandings.innerHTML = "Could not load league history.";
+    }
+    if (yearStandings) {
+      yearStandings.innerHTML = "Could not load league history.";
+    }
   });
