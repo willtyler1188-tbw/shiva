@@ -22,7 +22,7 @@ Promise.all([
     const allTimeHtml = sortedAllTime
       .map(team => `
         <li>
-          <strong>${team.name}</strong> —
+          <strong>${team.managerName}</strong> —
           ${team.totalWins}-${team.totalLosses}-${team.totalTies}
           | ${Number(team.totalPointsFor || 0).toFixed(1)} PF
           | ${team.seasons} seasons
@@ -35,7 +35,7 @@ Promise.all([
     new Chart(allTimeChart, {
       type: "bar",
       data: {
-        labels: sortedAllTime.map(team => team.name),
+        labels: sortedAllTime.map(team => team.managerName),
         datasets: [{
           label: "All-Time Points For",
           data: sortedAllTime.map(team => team.totalPointsFor),
@@ -43,23 +43,24 @@ Promise.all([
         }]
       },
       options: {
-  responsive: true,
-  plugins: {
-    legend: {
-      labels: { color: "white" }
-    }
-  },
-  scales: {
-    x: {
-      ticks: { color: "#d1d5db" },
-      grid: { color: "rgba(255,255,255,0.08)" }
-    },
-    y: {
-      ticks: { color: "#d1d5db" },
-      grid: { color: "rgba(255,255,255,0.08)" }
-    }
-  }
-}
+        responsive: true,
+        plugins: {
+          legend: {
+            labels: { color: "white" }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: "#d1d5db" },
+            grid: { color: "rgba(255,255,255,0.08)" }
+          },
+          y: {
+            ticks: { color: "#d1d5db" },
+            grid: { color: "rgba(255,255,255,0.08)" }
+          }
+        }
+      }
+    });
 
     const years = [...new Set(allSeasonRows.map(row => row.year))].sort((a, b) => b - a);
 
@@ -79,7 +80,7 @@ Promise.all([
       const html = teamsForYear
         .map(team => `
           <li>
-            <strong>${team.name}</strong> —
+            <strong>${team.managerName}</strong> (${team.teamName}) —
             ${team.wins}-${team.losses}-${team.ties}
             | ${Number(team.pointsFor || 0).toFixed(1)} PF
             | ${Number(team.pointsAgainst || 0).toFixed(1)} PA
@@ -104,12 +105,14 @@ Promise.all([
   })
   .catch(error => {
     console.error(error);
+
     const allTimeStandings = document.getElementById("allTimeStandings");
     const yearStandings = document.getElementById("yearStandings");
 
     if (allTimeStandings) {
       allTimeStandings.innerHTML = "Could not load league history.";
     }
+
     if (yearStandings) {
       yearStandings.innerHTML = "Could not load league history.";
     }
