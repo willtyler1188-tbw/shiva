@@ -1,0 +1,70 @@
+{
+  "allTimeStandings": [
+    {
+      "rank": 1,
+      "team": "Shiva",
+      "record": "102-58",
+      "note": "Replace with your exact real all-time record."
+    },
+    {
+      "rank": 2,
+      "team": "Dak",
+      "record": "97-63",
+      "note": "Replace with your exact real all-time record."
+    },
+    {
+      "rank": 3,
+      "team": "Ty",
+      "record": "94-66",
+      "note": "Replace with your exact real all-time record."
+    },
+    {
+      "rank": 4,
+      "team": "Will",
+      "record": "90-70",
+      "note": "Replace with your exact real all-time record."
+    }
+  ],
+  "yearlyStandings": {
+    "2024": [
+      {
+        "rank": 1,
+        "team": "Shiva",
+        "record": "10-4",
+        "note": "Replace with your real 2024 result."
+      },
+      {
+        "rank": 2,
+        "team": "Dak",
+        "record": "9-5",
+        "note": "Replace with your real 2024 result."
+      },
+      {
+        "rank": 3,
+        "team": "Ty",
+        "record": "8-6",
+        "note": "Replace with your real 2024 result."
+      }
+    ],
+    "2023": [
+      {
+        "rank": 1,
+        "team": "Dak",
+        "record": "11-3",
+        "note": "Replace with your real 2023 result."
+      },
+      {
+        "rank": 2,
+        "team": "Shiva",
+        "record": "10-4",
+        "note": "Replace with your real 2023 result."
+      },
+      {
+        "rank": 3,
+        "team": "Ty",
+        "record": "7-7",
+        "note": "Replace with your real 2023 result."
+      }
+    ]
+  }
+}
