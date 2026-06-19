@@ -1,8 +1,52 @@
 {
   "teams": [
-    { "name": "Team A", "wins": 8, "losses": 2, "points": 1450 },
-    { "name": "Team B", "wins": 7, "losses": 3, "points": 1390 },
-    { "name": "Team C", "wins": 6, "losses": 4, "points": 1345 },
-    { "name": "Team D", "wins": 4, "losses": 6, "points": 1200 }
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    },
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    },
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    },
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    },
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    },
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    },
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    },
+    {
+      "name": "",
+      "wins": 0,
+      "losses": 0,
+      "points": 0
+    }
   ]
 }
