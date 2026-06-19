@@ -1,87 +1,19 @@
 {
   "teams": [
     {
-      "name": "The Paper Chasers ",
+      "ownerId": "{341F3D99-848B-4AEB-9F3D-99848B7AEB30}",
+      "managerName": "8Joeey",
       "seasons": 6,
-      "totalWins": 37,
-      "totalLosses": 40,
+      "totalWins": 50,
+      "totalLosses": 27,
       "totalTies": 0,
-      "totalPointsFor": 9043.74,
-      "totalPointsAgainst": 9261.38,
+      "totalPointsFor": 9772.02,
+      "totalPointsAgainst": 9182.680000000002,
       "yearlyResults": [
         {
           "year": 2020,
-          "wins": 7,
-          "losses": 5,
-          "ties": 0,
-          "pointsFor": 1567.4199999999998,
-          "pointsAgainst": 1583.1200000000001,
-          "finalRank": 0,
-          "playoffSeed": 4
-        },
-        {
-          "year": 2021,
-          "wins": 4,
-          "losses": 9,
-          "ties": 0,
-          "pointsFor": 1364.82,
-          "pointsAgainst": 1529.4599999999998,
-          "finalRank": 0,
-          "playoffSeed": 8
-        },
-        {
-          "year": 2022,
-          "wins": 6,
-          "losses": 7,
-          "ties": 0,
-          "pointsFor": 1521.7399999999998,
-          "pointsAgainst": 1624.8000000000002,
-          "finalRank": 0,
-          "playoffSeed": 5
-        },
-        {
-          "year": 2023,
-          "wins": 7,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 1564.8,
-          "pointsAgainst": 1451.86,
-          "finalRank": 0,
-          "playoffSeed": 3
-        },
-        {
-          "year": 2024,
-          "wins": 7,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 1648.1800000000003,
-          "pointsAgainst": 1595.38,
-          "finalRank": 0,
-          "playoffSeed": 3
-        },
-        {
-          "year": 2025,
-          "wins": 6,
-          "losses": 7,
-          "ties": 0,
-          "pointsFor": 1376.78,
-          "pointsAgainst": 1476.76,
-          "finalRank": 0,
-          "playoffSeed": 5
-        }
-      ]
-    },
-    {
-      "name": "God's Plan.",
-      "seasons": 4,
-      "totalWins": 33,
-      "totalLosses": 18,
-      "totalTies": 0,
-      "totalPointsFor": 6449.36,
-      "totalPointsAgainst": 6009.620000000001,
-      "yearlyResults": [
-        {
-          "year": 2020,
+          "managerName": "8Joeey",
+          "teamName": "God's Plan.",
           "wins": 8,
           "losses": 4,
           "ties": 0,
@@ -92,6 +24,8 @@
         },
         {
           "year": 2021,
+          "managerName": "8Joeey",
+          "teamName": "God's Plan.",
           "wins": 8,
           "losses": 5,
           "ties": 0,
@@ -102,6 +36,8 @@
         },
         {
           "year": 2022,
+          "managerName": "8Joeey",
+          "teamName": "God's Plan.",
           "wins": 11,
           "losses": 2,
           "ties": 0,
@@ -112,6 +48,8 @@
         },
         {
           "year": 2023,
+          "managerName": "8Joeey",
+          "teamName": "God's Plan.",
           "wins": 6,
           "losses": 7,
           "ties": 0,
@@ -119,152 +57,11 @@
           "pointsAgainst": 1665.18,
           "finalRank": 0,
           "playoffSeed": 6
-        }
-      ]
-    },
-    {
-      "name": "Rectum Spectrum",
-      "seasons": 6,
-      "totalWins": 32,
-      "totalLosses": 45,
-      "totalTies": 0,
-      "totalPointsFor": 9046.98,
-      "totalPointsAgainst": 9579.42,
-      "yearlyResults": [
-        {
-          "year": 2020,
-          "wins": 1,
-          "losses": 11,
-          "ties": 0,
-          "pointsFor": 1255.1799999999998,
-          "pointsAgainst": 1592.82,
-          "finalRank": 0,
-          "playoffSeed": 8
-        },
-        {
-          "year": 2021,
-          "wins": 7,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 1643.6,
-          "pointsAgainst": 1719.56,
-          "finalRank": 0,
-          "playoffSeed": 4
-        },
-        {
-          "year": 2022,
-          "wins": 5,
-          "losses": 8,
-          "ties": 0,
-          "pointsFor": 1461.1599999999999,
-          "pointsAgainst": 1548.26,
-          "finalRank": 0,
-          "playoffSeed": 7
-        },
-        {
-          "year": 2023,
-          "wins": 8,
-          "losses": 5,
-          "ties": 0,
-          "pointsFor": 1595.1599999999996,
-          "pointsAgainst": 1604.92,
-          "finalRank": 0,
-          "playoffSeed": 1
         },
         {
           "year": 2024,
-          "wins": 6,
-          "losses": 7,
-          "ties": 0,
-          "pointsFor": 1556.88,
-          "pointsAgainst": 1457.92,
-          "finalRank": 0,
-          "playoffSeed": 5
-        },
-        {
-          "year": 2025,
-          "wins": 5,
-          "losses": 8,
-          "ties": 0,
-          "pointsFor": 1535,
-          "pointsAgainst": 1655.94,
-          "finalRank": 0,
-          "playoffSeed": 7
-        }
-      ]
-    },
-    {
-      "name": "Bobby Bouche's Qaulity H2O",
-      "seasons": 5,
-      "totalWins": 31,
-      "totalLosses": 34,
-      "totalTies": 0,
-      "totalPointsFor": 7715.160000000001,
-      "totalPointsAgainst": 8173.42,
-      "yearlyResults": [
-        {
-          "year": 2021,
-          "wins": 7,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 1695.2999999999997,
-          "pointsAgainst": 1725.48,
-          "finalRank": 0,
-          "playoffSeed": 3
-        },
-        {
-          "year": 2022,
-          "wins": 7,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 1590.52,
-          "pointsAgainst": 1661.3,
-          "finalRank": 0,
-          "playoffSeed": 3
-        },
-        {
-          "year": 2023,
-          "wins": 8,
-          "losses": 5,
-          "ties": 0,
-          "pointsFor": 1425.26,
-          "pointsAgainst": 1430.6200000000001,
-          "finalRank": 0,
-          "playoffSeed": 2
-        },
-        {
-          "year": 2024,
-          "wins": 5,
-          "losses": 8,
-          "ties": 0,
-          "pointsFor": 1553.2000000000003,
-          "pointsAgainst": 1741.7000000000003,
-          "finalRank": 0,
-          "playoffSeed": 7
-        },
-        {
-          "year": 2025,
-          "wins": 4,
-          "losses": 9,
-          "ties": 0,
-          "pointsFor": 1450.8799999999999,
-          "pointsAgainst": 1614.32,
-          "finalRank": 0,
-          "playoffSeed": 8
-        }
-      ]
-    },
-    {
-      "name": "God's Plan.Always",
-      "seasons": 2,
-      "totalWins": 17,
-      "totalLosses": 9,
-      "totalTies": 0,
-      "totalPointsFor": 3322.66,
-      "totalPointsAgainst": 3173.0600000000004,
-      "yearlyResults": [
-        {
-          "year": 2024,
+          "managerName": "8Joeey",
+          "teamName": "God's Plan.Always",
           "wins": 6,
           "losses": 7,
           "ties": 0,
@@ -275,6 +72,8 @@
         },
         {
           "year": 2025,
+          "managerName": "8Joeey",
+          "teamName": "God's Plan.Always",
           "wins": 11,
           "losses": 2,
           "ties": 0,
@@ -286,47 +85,151 @@
       ]
     },
     {
-      "name": "TDs N Beer",
-      "seasons": 2,
-      "totalWins": 15,
-      "totalLosses": 10,
+      "ownerId": "{C36F3AC7-3268-4513-AF3A-C7326845134B}",
+      "managerName": "Tmoss80",
+      "seasons": 6,
+      "totalWins": 41,
+      "totalLosses": 36,
       "totalTies": 0,
-      "totalPointsFor": 3155.08,
-      "totalPointsAgainst": 2994.2599999999993,
+      "totalPointsFor": 9470.14,
+      "totalPointsAgainst": 9624.82,
       "yearlyResults": [
         {
           "year": 2020,
-          "wins": 9,
-          "losses": 3,
+          "managerName": "Tmoss80",
+          "teamName": "Baby Jesus",
+          "wins": 10,
+          "losses": 2,
           "ties": 0,
-          "pointsFor": 1569.76,
-          "pointsAgainst": 1395.7399999999998,
+          "pointsFor": 1754.9800000000002,
+          "pointsAgainst": 1451.3999999999999,
+          "finalRank": 0,
+          "playoffSeed": 1
+        },
+        {
+          "year": 2021,
+          "managerName": "Tmoss80",
+          "teamName": "Bobby Bouche's Qaulity H2O",
+          "wins": 7,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1695.2999999999997,
+          "pointsAgainst": 1725.48,
+          "finalRank": 0,
+          "playoffSeed": 3
+        },
+        {
+          "year": 2022,
+          "managerName": "Tmoss80",
+          "teamName": "Bobby Bouche's Qaulity H2O",
+          "wins": 7,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1590.52,
+          "pointsAgainst": 1661.3,
+          "finalRank": 0,
+          "playoffSeed": 3
+        },
+        {
+          "year": 2023,
+          "managerName": "Tmoss80",
+          "teamName": "Bobby Bouche's Qaulity H2O",
+          "wins": 8,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1425.26,
+          "pointsAgainst": 1430.6200000000001,
+          "finalRank": 0,
+          "playoffSeed": 2
+        },
+        {
+          "year": 2024,
+          "managerName": "Tmoss80",
+          "teamName": "Bobby Bouche's Qaulity H2O",
+          "wins": 5,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1553.2000000000003,
+          "pointsAgainst": 1741.7000000000003,
+          "finalRank": 0,
+          "playoffSeed": 7
+        },
+        {
+          "year": 2025,
+          "managerName": "Tmoss80",
+          "teamName": "Bobby Bouche's Qaulity H2O",
+          "wins": 4,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1450.8799999999999,
+          "pointsAgainst": 1614.32,
+          "finalRank": 0,
+          "playoffSeed": 8
+        }
+      ]
+    },
+    {
+      "ownerId": "{79B84046-8741-47C0-B840-468741B7C024}",
+      "managerName": "caseybohannan3",
+      "seasons": 6,
+      "totalWins": 40,
+      "totalLosses": 37,
+      "totalTies": 0,
+      "totalPointsFor": 9853.32,
+      "totalPointsAgainst": 9316.2,
+      "yearlyResults": [
+        {
+          "year": 2020,
+          "managerName": "caseybohannan3",
+          "teamName": "Don Julio Jones 1942",
+          "wins": 6,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1472.2199999999998,
+          "pointsAgainst": 1413.08,
+          "finalRank": 0,
+          "playoffSeed": 5
+        },
+        {
+          "year": 2021,
+          "managerName": "caseybohannan3",
+          "teamName": "Don Julio Jones ",
+          "wins": 7,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1598.8,
+          "pointsAgainst": 1511.14,
+          "finalRank": 0,
+          "playoffSeed": 5
+        },
+        {
+          "year": 2022,
+          "managerName": "caseybohannan3",
+          "teamName": "Alvin and the  Chipmunks ",
+          "wins": 8,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1780.92,
+          "pointsAgainst": 1565.9,
           "finalRank": 0,
           "playoffSeed": 2
         },
         {
           "year": 2023,
-          "wins": 6,
-          "losses": 7,
+          "managerName": "caseybohannan3",
+          "teamName": "Lamborghini Mercy",
+          "wins": 5,
+          "losses": 8,
           "ties": 0,
-          "pointsFor": 1585.32,
-          "pointsAgainst": 1598.5199999999995,
+          "pointsFor": 1679.0200000000002,
+          "pointsAgainst": 1592.0200000000002,
           "finalRank": 0,
-          "playoffSeed": 5
-        }
-      ]
-    },
-    {
-      "name": "Taylor Gang",
-      "seasons": 2,
-      "totalWins": 14,
-      "totalLosses": 12,
-      "totalTies": 0,
-      "totalPointsFor": 3322.3599999999997,
-      "totalPointsAgainst": 3234.0600000000004,
-      "yearlyResults": [
+          "playoffSeed": 8
+        },
         {
           "year": 2024,
+          "managerName": "caseybohannan3",
+          "teamName": "Taylor Gang",
           "wins": 5,
           "losses": 8,
           "ties": 0,
@@ -337,6 +240,8 @@
         },
         {
           "year": 2025,
+          "managerName": "caseybohannan3",
+          "teamName": "Taylor Gang",
           "wins": 9,
           "losses": 4,
           "ties": 0,
@@ -348,16 +253,19 @@
       ]
     },
     {
-      "name": "Lizard Kings",
-      "seasons": 2,
-      "totalWins": 12,
-      "totalLosses": 13,
+      "ownerId": "{9A28C153-99D3-4052-AD01-397741E9DB57}",
+      "managerName": "wesste3025606",
+      "seasons": 6,
+      "totalWins": 38,
+      "totalLosses": 39,
       "totalTies": 0,
-      "totalPointsFor": 3310.12,
-      "totalPointsAgainst": 3253.7400000000002,
+      "totalPointsFor": 9893.82,
+      "totalPointsAgainst": 9791.24,
       "yearlyResults": [
         {
           "year": 2020,
+          "managerName": "wesste3025606",
+          "teamName": "Lizard Kings",
           "wins": 4,
           "losses": 8,
           "ties": 0,
@@ -368,6 +276,8 @@
         },
         {
           "year": 2021,
+          "managerName": "wesste3025606",
+          "teamName": "Lizard Kings",
           "wins": 8,
           "losses": 5,
           "ties": 0,
@@ -375,167 +285,23 @@
           "pointsAgainst": 1672.46,
           "finalRank": 0,
           "playoffSeed": 1
-        }
-      ]
-    },
-    {
-      "name": "Baby Jesus",
-      "seasons": 1,
-      "totalWins": 10,
-      "totalLosses": 2,
-      "totalTies": 0,
-      "totalPointsFor": 1754.9800000000002,
-      "totalPointsAgainst": 1451.3999999999999,
-      "yearlyResults": [
-        {
-          "year": 2020,
-          "wins": 10,
-          "losses": 2,
-          "ties": 0,
-          "pointsFor": 1754.9800000000002,
-          "pointsAgainst": 1451.3999999999999,
-          "finalRank": 0,
-          "playoffSeed": 1
-        }
-      ]
-    },
-    {
-      "name": "The Shoulda Beens",
-      "seasons": 1,
-      "totalWins": 10,
-      "totalLosses": 3,
-      "totalTies": 0,
-      "totalPointsFor": 1646.06,
-      "totalPointsAgainst": 1507.5,
-      "yearlyResults": [
-        {
-          "year": 2024,
-          "wins": 10,
-          "losses": 3,
-          "ties": 0,
-          "pointsFor": 1646.06,
-          "pointsAgainst": 1507.5,
-          "finalRank": 0,
-          "playoffSeed": 1
-        }
-      ]
-    },
-    {
-      "name": "Breece's Pieces",
-      "seasons": 1,
-      "totalWins": 9,
-      "totalLosses": 4,
-      "totalTies": 0,
-      "totalPointsFor": 1738.6000000000004,
-      "totalPointsAgainst": 1657.3000000000004,
-      "yearlyResults": [
-        {
-          "year": 2024,
-          "wins": 9,
-          "losses": 4,
-          "ties": 0,
-          "pointsFor": 1738.6000000000004,
-          "pointsAgainst": 1657.3000000000004,
-          "finalRank": 0,
-          "playoffSeed": 2
-        }
-      ]
-    },
-    {
-      "name": "Alvin and the  Chipmunks ",
-      "seasons": 1,
-      "totalWins": 8,
-      "totalLosses": 5,
-      "totalTies": 0,
-      "totalPointsFor": 1780.92,
-      "totalPointsAgainst": 1565.9,
-      "yearlyResults": [
+        },
         {
           "year": 2022,
-          "wins": 8,
-          "losses": 5,
+          "managerName": "wesste3025606",
+          "teamName": "The RunItBacks",
+          "wins": 5,
+          "losses": 8,
           "ties": 0,
-          "pointsFor": 1780.92,
-          "pointsAgainst": 1565.9,
-          "finalRank": 0,
-          "playoffSeed": 2
-        }
-      ]
-    },
-    {
-      "name": "Don Julio Jones ",
-      "seasons": 1,
-      "totalWins": 7,
-      "totalLosses": 6,
-      "totalTies": 0,
-      "totalPointsFor": 1598.8,
-      "totalPointsAgainst": 1511.14,
-      "yearlyResults": [
-        {
-          "year": 2021,
-          "wins": 7,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 1598.8,
-          "pointsAgainst": 1511.14,
-          "finalRank": 0,
-          "playoffSeed": 5
-        }
-      ]
-    },
-    {
-      "name": "TDs  N Beer",
-      "seasons": 1,
-      "totalWins": 7,
-      "totalLosses": 6,
-      "totalTies": 0,
-      "totalPointsFor": 1558.46,
-      "totalPointsAgainst": 1512.6400000000003,
-      "yearlyResults": [
-        {
-          "year": 2022,
-          "wins": 7,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 1558.46,
-          "pointsAgainst": 1512.6400000000003,
-          "finalRank": 0,
-          "playoffSeed": 4
-        }
-      ]
-    },
-    {
-      "name": "Super Comeback SZN",
-      "seasons": 1,
-      "totalWins": 6,
-      "totalLosses": 7,
-      "totalTies": 0,
-      "totalPointsFor": 1805.1200000000001,
-      "totalPointsAgainst": 1696.6999999999998,
-      "yearlyResults": [
-        {
-          "year": 2021,
-          "wins": 6,
-          "losses": 7,
-          "ties": 0,
-          "pointsFor": 1805.1200000000001,
-          "pointsAgainst": 1696.6999999999998,
+          "pointsFor": 1499.6200000000003,
+          "pointsAgainst": 1595.84,
           "finalRank": 0,
           "playoffSeed": 6
-        }
-      ]
-    },
-    {
-      "name": "Javaris Ja'Marr Javarison-Lamar",
-      "seasons": 1,
-      "totalWins": 6,
-      "totalLosses": 7,
-      "totalTies": 0,
-      "totalPointsFor": 1695.6599999999999,
-      "totalPointsAgainst": 1650.54,
-      "yearlyResults": [
+        },
         {
           "year": 2023,
+          "managerName": "wesste3025606",
+          "teamName": "Javaris Ja'Marr Javarison-Lamar",
           "wins": 6,
           "losses": 7,
           "ties": 0,
@@ -543,20 +309,23 @@
           "pointsAgainst": 1650.54,
           "finalRank": 0,
           "playoffSeed": 4
-        }
-      ]
-    },
-    {
-      "name": "Bucky Charms ",
-      "seasons": 1,
-      "totalWins": 6,
-      "totalLosses": 7,
-      "totalTies": 0,
-      "totalPointsFor": 1649.82,
-      "totalPointsAgainst": 1633.8200000000002,
-      "yearlyResults": [
+        },
+        {
+          "year": 2024,
+          "managerName": "wesste3025606",
+          "teamName": "Breece's Pieces",
+          "wins": 9,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1738.6000000000004,
+          "pointsAgainst": 1657.3000000000004,
+          "finalRank": 0,
+          "playoffSeed": 2
+        },
         {
           "year": 2025,
+          "managerName": "wesste3025606",
+          "teamName": "Bucky Charms ",
           "wins": 6,
           "losses": 7,
           "ties": 0,
@@ -568,79 +337,79 @@
       ]
     },
     {
-      "name": "First-Down Flounders",
-      "seasons": 1,
-      "totalWins": 6,
-      "totalLosses": 7,
+      "ownerId": "{196A768D-8E7C-408A-868F-B50330CC6292}",
+      "managerName": "Tyler Will1188",
+      "seasons": 6,
+      "totalWins": 37,
+      "totalLosses": 40,
       "totalTies": 0,
-      "totalPointsFor": 1481.1399999999999,
-      "totalPointsAgainst": 1489.8999999999999,
-      "yearlyResults": [
-        {
-          "year": 2025,
-          "wins": 6,
-          "losses": 7,
-          "ties": 0,
-          "pointsFor": 1481.1399999999999,
-          "pointsAgainst": 1489.8999999999999,
-          "finalRank": 0,
-          "playoffSeed": 4
-        }
-      ]
-    },
-    {
-      "name": "Don Julio Jones 1942",
-      "seasons": 1,
-      "totalWins": 6,
-      "totalLosses": 6,
-      "totalTies": 0,
-      "totalPointsFor": 1472.2199999999998,
-      "totalPointsAgainst": 1413.08,
+      "totalPointsFor": 9708.24,
+      "totalPointsAgainst": 9437.08,
       "yearlyResults": [
         {
           "year": 2020,
-          "wins": 6,
-          "losses": 6,
+          "managerName": "Tyler Will1188",
+          "teamName": "TDs N Beer",
+          "wins": 9,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 1472.2199999999998,
-          "pointsAgainst": 1413.08,
+          "pointsFor": 1569.76,
+          "pointsAgainst": 1395.7399999999998,
           "finalRank": 0,
-          "playoffSeed": 5
-        }
-      ]
-    },
-    {
-      "name": "iBang UrMom69",
-      "seasons": 1,
-      "totalWins": 6,
-      "totalLosses": 7,
-      "totalTies": 0,
-      "totalPointsFor": 1393.6200000000001,
-      "totalPointsAgainst": 1504.54,
-      "yearlyResults": [
+          "playoffSeed": 2
+        },
         {
-          "year": 2023,
+          "year": 2021,
+          "managerName": "Tyler Will1188",
+          "teamName": "Super Comeback SZN",
           "wins": 6,
           "losses": 7,
           "ties": 0,
-          "pointsFor": 1393.6200000000001,
-          "pointsAgainst": 1504.54,
+          "pointsFor": 1805.1200000000001,
+          "pointsAgainst": 1696.6999999999998,
           "finalRank": 0,
-          "playoffSeed": 7
-        }
-      ]
-    },
-    {
-      "name": "NACUA MATATA",
-      "seasons": 1,
-      "totalWins": 5,
-      "totalLosses": 8,
-      "totalTies": 0,
-      "totalPointsFor": 1699.48,
-      "totalPointsAgainst": 1610.6000000000001,
-      "yearlyResults": [
+          "playoffSeed": 6
+        },
+        {
+          "year": 2022,
+          "managerName": "Tyler Will1188",
+          "teamName": "TDs  N Beer",
+          "wins": 7,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1558.46,
+          "pointsAgainst": 1512.6400000000003,
+          "finalRank": 0,
+          "playoffSeed": 4
+        },
+        {
+          "year": 2023,
+          "managerName": "Tyler Will1188",
+          "teamName": "TDs N Beer",
+          "wins": 6,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1585.32,
+          "pointsAgainst": 1598.5199999999995,
+          "finalRank": 0,
+          "playoffSeed": 5
+        },
+        {
+          "year": 2024,
+          "managerName": "Tyler Will1188",
+          "teamName": "Not Sacko",
+          "wins": 4,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1490.1000000000001,
+          "pointsAgainst": 1622.88,
+          "finalRank": 0,
+          "playoffSeed": 8
+        },
         {
           "year": 2025,
+          "managerName": "Tyler Will1188",
+          "teamName": "NACUA MATATA",
           "wins": 5,
           "losses": 8,
           "ties": 0,
@@ -652,58 +421,115 @@
       ]
     },
     {
-      "name": "Lamborghini Mercy",
-      "seasons": 1,
-      "totalWins": 5,
-      "totalLosses": 8,
+      "ownerId": "{5441F399-B8D5-4F74-A206-38D6E94E710E}",
+      "managerName": "fordfe9134001",
+      "seasons": 6,
+      "totalWins": 37,
+      "totalLosses": 40,
       "totalTies": 0,
-      "totalPointsFor": 1679.0200000000002,
-      "totalPointsAgainst": 1592.0200000000002,
+      "totalPointsFor": 9043.74,
+      "totalPointsAgainst": 9261.38,
       "yearlyResults": [
         {
-          "year": 2023,
-          "wins": 5,
-          "losses": 8,
+          "year": 2020,
+          "managerName": "fordfe9134001",
+          "teamName": "The Paper Chasers ",
+          "wins": 7,
+          "losses": 5,
           "ties": 0,
-          "pointsFor": 1679.0200000000002,
-          "pointsAgainst": 1592.0200000000002,
+          "pointsFor": 1567.4199999999998,
+          "pointsAgainst": 1583.1200000000001,
           "finalRank": 0,
-          "playoffSeed": 8
-        }
-      ]
-    },
-    {
-      "name": "The RunItBacks",
-      "seasons": 1,
-      "totalWins": 5,
-      "totalLosses": 8,
-      "totalTies": 0,
-      "totalPointsFor": 1499.6200000000003,
-      "totalPointsAgainst": 1595.84,
-      "yearlyResults": [
-        {
-          "year": 2022,
-          "wins": 5,
-          "losses": 8,
-          "ties": 0,
-          "pointsFor": 1499.6200000000003,
-          "pointsAgainst": 1595.84,
-          "finalRank": 0,
-          "playoffSeed": 6
-        }
-      ]
-    },
-    {
-      "name": "YOUR SHIVA_V_CHAMP❄️",
-      "seasons": 1,
-      "totalWins": 5,
-      "totalLosses": 8,
-      "totalTies": 0,
-      "totalPointsFor": 1430.04,
-      "totalPointsAgainst": 1686.1399999999999,
-      "yearlyResults": [
+          "playoffSeed": 4
+        },
         {
           "year": 2021,
+          "managerName": "fordfe9134001",
+          "teamName": "The Paper Chasers ",
+          "wins": 4,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1364.82,
+          "pointsAgainst": 1529.4599999999998,
+          "finalRank": 0,
+          "playoffSeed": 8
+        },
+        {
+          "year": 2022,
+          "managerName": "fordfe9134001",
+          "teamName": "The Paper Chasers ",
+          "wins": 6,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1521.7399999999998,
+          "pointsAgainst": 1624.8000000000002,
+          "finalRank": 0,
+          "playoffSeed": 5
+        },
+        {
+          "year": 2023,
+          "managerName": "fordfe9134001",
+          "teamName": "The Paper Chasers ",
+          "wins": 7,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1564.8,
+          "pointsAgainst": 1451.86,
+          "finalRank": 0,
+          "playoffSeed": 3
+        },
+        {
+          "year": 2024,
+          "managerName": "fordfe9134001",
+          "teamName": "The Paper Chasers ",
+          "wins": 7,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1648.1800000000003,
+          "pointsAgainst": 1595.38,
+          "finalRank": 0,
+          "playoffSeed": 3
+        },
+        {
+          "year": 2025,
+          "managerName": "fordfe9134001",
+          "teamName": "The Paper Chasers ",
+          "wins": 6,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1376.78,
+          "pointsAgainst": 1476.76,
+          "finalRank": 0,
+          "playoffSeed": 5
+        }
+      ]
+    },
+    {
+      "ownerId": "{FF691D0F-DD11-4B80-A9D9-BD803BB3E631}",
+      "managerName": "jmhoyt6716044",
+      "seasons": 6,
+      "totalWins": 33,
+      "totalLosses": 44,
+      "totalTies": 0,
+      "totalPointsFor": 8847.039999999999,
+      "totalPointsAgainst": 9442.48,
+      "yearlyResults": [
+        {
+          "year": 2020,
+          "managerName": "jmhoyt6716044",
+          "teamName": "Sore Ballz",
+          "wins": 3,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1377.86,
+          "pointsAgainst": 1525.38,
+          "finalRank": 0,
+          "playoffSeed": 7
+        },
+        {
+          "year": 2021,
+          "managerName": "jmhoyt6716044",
+          "teamName": "YOUR SHIVA_V_CHAMP❄️",
           "wins": 5,
           "losses": 8,
           "ties": 0,
@@ -711,41 +537,11 @@
           "pointsAgainst": 1686.1399999999999,
           "finalRank": 0,
           "playoffSeed": 7
-        }
-      ]
-    },
-    {
-      "name": "Not Sacko",
-      "seasons": 1,
-      "totalWins": 4,
-      "totalLosses": 9,
-      "totalTies": 0,
-      "totalPointsFor": 1490.1000000000001,
-      "totalPointsAgainst": 1622.88,
-      "yearlyResults": [
-        {
-          "year": 2024,
-          "wins": 4,
-          "losses": 9,
-          "ties": 0,
-          "pointsFor": 1490.1000000000001,
-          "pointsAgainst": 1622.88,
-          "finalRank": 0,
-          "playoffSeed": 8
-        }
-      ]
-    },
-    {
-      "name": "City Team Name",
-      "seasons": 1,
-      "totalWins": 3,
-      "totalLosses": 10,
-      "totalTies": 0,
-      "totalPointsFor": 1518.3200000000002,
-      "totalPointsAgainst": 1729.02,
-      "yearlyResults": [
+        },
         {
           "year": 2022,
+          "managerName": "jmhoyt6716044",
+          "teamName": "City Team Name",
           "wins": 3,
           "losses": 10,
           "ties": 0,
@@ -753,25 +549,124 @@
           "pointsAgainst": 1729.02,
           "finalRank": 0,
           "playoffSeed": 8
+        },
+        {
+          "year": 2023,
+          "managerName": "jmhoyt6716044",
+          "teamName": "iBang UrMom69",
+          "wins": 6,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1393.6200000000001,
+          "pointsAgainst": 1504.54,
+          "finalRank": 0,
+          "playoffSeed": 7
+        },
+        {
+          "year": 2024,
+          "managerName": "jmhoyt6716044",
+          "teamName": "The Shoulda Beens",
+          "wins": 10,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 1646.06,
+          "pointsAgainst": 1507.5,
+          "finalRank": 0,
+          "playoffSeed": 1
+        },
+        {
+          "year": 2025,
+          "managerName": "jmhoyt6716044",
+          "teamName": "First-Down Flounders",
+          "wins": 6,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1481.1399999999999,
+          "pointsAgainst": 1489.8999999999999,
+          "finalRank": 0,
+          "playoffSeed": 4
         }
       ]
     },
     {
-      "name": "Sore Ballz",
-      "seasons": 1,
-      "totalWins": 3,
-      "totalLosses": 9,
+      "ownerId": "{49F139A9-42C7-477C-9F79-B6A85B194794}",
+      "managerName": "Alex always Wins",
+      "seasons": 6,
+      "totalWins": 32,
+      "totalLosses": 45,
       "totalTies": 0,
-      "totalPointsFor": 1377.86,
-      "totalPointsAgainst": 1525.38,
+      "totalPointsFor": 9046.98,
+      "totalPointsAgainst": 9579.42,
       "yearlyResults": [
         {
           "year": 2020,
-          "wins": 3,
-          "losses": 9,
+          "managerName": "Alex always Wins",
+          "teamName": "Rectum Spectrum",
+          "wins": 1,
+          "losses": 11,
           "ties": 0,
-          "pointsFor": 1377.86,
-          "pointsAgainst": 1525.38,
+          "pointsFor": 1255.1799999999998,
+          "pointsAgainst": 1592.82,
+          "finalRank": 0,
+          "playoffSeed": 8
+        },
+        {
+          "year": 2021,
+          "managerName": "Alex always Wins",
+          "teamName": "Rectum Spectrum",
+          "wins": 7,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1643.6,
+          "pointsAgainst": 1719.56,
+          "finalRank": 0,
+          "playoffSeed": 4
+        },
+        {
+          "year": 2022,
+          "managerName": "Alex always Wins",
+          "teamName": "Rectum Spectrum",
+          "wins": 5,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1461.1599999999999,
+          "pointsAgainst": 1548.26,
+          "finalRank": 0,
+          "playoffSeed": 7
+        },
+        {
+          "year": 2023,
+          "managerName": "Alex always Wins",
+          "teamName": "Rectum Spectrum",
+          "wins": 8,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1595.1599999999996,
+          "pointsAgainst": 1604.92,
+          "finalRank": 0,
+          "playoffSeed": 1
+        },
+        {
+          "year": 2024,
+          "managerName": "Alex always Wins",
+          "teamName": "Rectum Spectrum",
+          "wins": 6,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1556.88,
+          "pointsAgainst": 1457.92,
+          "finalRank": 0,
+          "playoffSeed": 5
+        },
+        {
+          "year": 2025,
+          "managerName": "Alex always Wins",
+          "teamName": "Rectum Spectrum",
+          "wins": 5,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1535,
+          "pointsAgainst": 1655.94,
           "finalRank": 0,
           "playoffSeed": 7
         }
