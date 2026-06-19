@@ -19,6 +19,7 @@
   </header>
 
   <main class="dashboard">
+    <!-- All-time standings -->
     <section class="panel trophy-panel">
       <div class="panel-header">
         <div>
@@ -31,6 +32,7 @@
       </ol>
     </section>
 
+    <!-- Yearly standings -->
     <section class="panel cowboys-panel">
       <div class="panel-header">
         <div>
@@ -49,6 +51,7 @@
       </ol>
     </section>
 
+    <!-- Chart -->
     <section class="panel chart-panel">
       <div class="panel-header">
         <div>
@@ -62,6 +65,7 @@
       </div>
     </section>
 
+    <!-- Head-to-head -->
     <section class="panel headtohead-panel">
       <div class="panel-header">
         <div>
@@ -135,23 +139,13 @@
   </main>
 
   <script>
+    // ======= Standings & chart from site-data.json =======
     let siteData = null;
-    let headToHeadData = [];
     let leagueChart = null;
 
     const allTimeStandingsList = document.getElementById("allTimeStandingsList");
     const yearlyStandingsList = document.getElementById("yearlyStandingsList");
     const seasonSelect = document.getElementById("seasonSelect");
-
-    const teamASelect = document.getElementById("teamASelect");
-    const teamBSelect = document.getElementById("teamBSelect");
-    const yearFilter = document.getElementById("yearFilter");
-    const matchupTableBody = document.getElementById("matchupTableBody");
-
-    const recordText = document.getElementById("recordText");
-    const pointsText = document.getElementById("pointsText");
-    const marginText = document.getElementById("marginText");
-    const lastMeetingText = document.getElementById("lastMeetingText");
 
     async function loadSiteData() {
       try {
@@ -166,6 +160,7 @@
       } catch (error) {
         allTimeStandingsList.innerHTML = "<li>Could not load site data.</li>";
         yearlyStandingsList.innerHTML = "<li>Could not load yearly standings.</li>";
+        console.error(error);
       }
     }
 
@@ -191,7 +186,9 @@
         return;
       }
 
-      seasonSelect.innerHTML = years.map(year => `<option value="${year}">${year}</option>`).join("");
+      seasonSelect.innerHTML = years
+        .map(year => `<option value="${year}">${year}</option>`)
+        .join("");
     }
 
     function renderYearlyStandings(year) {
@@ -227,16 +224,7 @@
           datasets: [{
             label: "Wins",
             data: wins,
-            backgroundColor: [
-              "rgba(125, 211, 252, 0.65)",
-              "rgba(251, 191, 36, 0.65)",
-              "rgba(74, 222, 128, 0.65)",
-              "rgba(244, 114, 182, 0.65)",
-              "rgba(192, 132, 252, 0.65)",
-              "rgba(248, 113, 113, 0.65)",
-              "rgba(96, 165, 250, 0.65)",
-              "rgba(251, 146, 60, 0.65)"
-            ],
+            backgroundColor: "rgba(125, 211, 252, 0.65)",
             borderWidth: 1.5
           }]
         },
@@ -263,6 +251,19 @@
       });
     }
 
+    // ======= Head-to-head from headtohead.json =======
+    let headToHeadData = [];
+
+    const teamASelect = document.getElementById("teamASelect");
+    const teamBSelect = document.getElementById("teamBSelect");
+    const yearFilter = document.getElementById("yearFilter");
+    const matchupTableBody = document.getElementById("matchupTableBody");
+
+    const recordText = document.getElementById("recordText");
+    const pointsText = document.getElementById("pointsText");
+    const marginText = document.getElementById("marginText");
+    const lastMeetingText = document.getElementById("lastMeetingText");
+
     async function loadHeadToHeadData() {
       try {
         const response = await fetch("./headtohead.json");
@@ -278,6 +279,7 @@
             <td colspan="6">Could not load head-to-head data.</td>
           </tr>
         `;
+        console.error(error);
       }
     }
 
@@ -318,23 +320,25 @@
       const teamB = teamBSelect.value;
       const selectedYear = yearFilter.value;
 
-      return headToHeadData.filter(game => {
-        const sameMatchup =
-          teamA &&
-          teamB &&
-          (
-            (game.team1 === teamA && game.team2 === teamB) ||
-            (game.team1 === teamB && game.team2 === teamA)
-          );
+      return headToHeadData
+        .filter(game => {
+          const sameMatchup =
+            teamA &&
+            teamB &&
+            (
+              (game.team1 === teamA && game.team2 === teamB) ||
+              (game.team1 === teamB && game.team2 === teamA)
+            );
 
-        const yearMatch =
-          selectedYear === "all" || String(game.year) === String(selectedYear);
+          const yearMatch =
+            selectedYear === "all" || String(game.year) === String(selectedYear);
 
-        return sameMatchup && yearMatch;
-      }).sort((a, b) => {
-        if (b.year !== a.year) return b.year - a.year;
-        return Number(b.week) - Number(a.week);
-      });
+          return sameMatchup && yearMatch;
+        })
+        .sort((a, b) => {
+          if (b.year !== a.year) return b.year - a.year;
+          return Number(b.week) - Number(a.week);
+        });
     }
 
     function renderHeadToHead() {
