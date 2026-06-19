@@ -185,11 +185,13 @@
 
     function populateSeasonDropdown(yearlyData) {
       const years = Object.keys(yearlyData).sort((a, b) => Number(b) - Number(a));
-      seasonSelect.innerHTML = years.map(year => `<option value="${year}">${year}</option>`).join("");
 
-      seasonSelect.addEventListener("change", () => {
-        renderYearlyStandings(seasonSelect.value);
-      });
+      if (!years.length) {
+        seasonSelect.innerHTML = `<option value="">No seasons</option>`;
+        return;
+      }
+
+      seasonSelect.innerHTML = years.map(year => `<option value="${year}">${year}</option>`).join("");
     }
 
     function renderYearlyStandings(year) {
@@ -209,7 +211,10 @@
     function renderChart(data) {
       const ctx = document.getElementById("leagueChart");
       const labels = data.map(team => team.team);
-      const wins = data.map(team => Number(String(team.record).split("-")[0]) || 0);
+      const wins = data.map(team => {
+        const parts = String(team.record).split("-");
+        return Number(parts[0]) || 0;
+      });
 
       if (leagueChart) {
         leagueChart.destroy();
@@ -228,15 +233,9 @@
               "rgba(74, 222, 128, 0.65)",
               "rgba(244, 114, 182, 0.65)",
               "rgba(192, 132, 252, 0.65)",
-              "rgba(248, 113, 113, 0.65)"
-            ],
-            borderColor: [
-              "rgba(125, 211, 252, 1)",
-              "rgba(251, 191, 36, 1)",
-              "rgba(74, 222, 128, 1)",
-              "rgba(244, 114, 182, 1)",
-              "rgba(192, 132, 252, 1)",
-              "rgba(248, 113, 113, 1)"
+              "rgba(248, 113, 113, 0.65)",
+              "rgba(96, 165, 250, 0.65)",
+              "rgba(251, 146, 60, 0.65)"
             ],
             borderWidth: 1.5
           }]
@@ -246,9 +245,7 @@
           maintainAspectRatio: false,
           plugins: {
             legend: {
-              labels: {
-                color: "#f8fafc"
-              }
+              labels: { color: "#f8fafc" }
             }
           },
           scales: {
@@ -305,6 +302,7 @@
 
     function populateYearDropdown(data) {
       const years = [...new Set(data.map(game => game.year))].sort((a, b) => b - a);
+
       yearFilter.innerHTML = `<option value="all">All Years</option>`;
 
       years.forEach(year => {
@@ -335,7 +333,7 @@
         return sameMatchup && yearMatch;
       }).sort((a, b) => {
         if (b.year !== a.year) return b.year - a.year;
-        return b.week - a.week;
+        return Number(b.week) - Number(a.week);
       });
     }
 
@@ -378,8 +376,8 @@
       let totalMargin = 0;
 
       games.forEach(game => {
-        const scoreA = game.team1 === teamA ? game.team1Score : game.team2Score;
-        const scoreB = game.team1 === teamA ? game.team2Score : game.team1Score;
+        const scoreA = game.team1 === teamA ? Number(game.team1Score) : Number(game.team2Score);
+        const scoreB = game.team1 === teamA ? Number(game.team2Score) : Number(game.team1Score);
 
         teamAPoints += scoreA;
         teamBPoints += scoreB;
@@ -404,13 +402,14 @@
           <td>${game.year}</td>
           <td>${game.week}</td>
           <td>${game.team1} vs ${game.team2}</td>
-          <td>${game.team1Score.toFixed(1)} - ${game.team2Score.toFixed(1)}</td>
+          <td>${Number(game.team1Score).toFixed(1)} - ${Number(game.team2Score).toFixed(1)}</td>
           <td>${game.winner}</td>
           <td>${game.playoff ? "Playoffs" : "Regular"}</td>
         </tr>
       `).join("");
     }
 
+    seasonSelect.addEventListener("change", () => renderYearlyStandings(seasonSelect.value));
     teamASelect.addEventListener("change", renderHeadToHead);
     teamBSelect.addEventListener("change", renderHeadToHead);
     yearFilter.addEventListener("change", renderHeadToHead);
