@@ -43,22 +43,23 @@ Promise.all([
         }]
       },
       options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            labels: { color: "white" }
-          }
-        },
-        scales: {
-          x: {
-            ticks: { color: "white" }
-          },
-          y: {
-            ticks: { color: "white" }
-          }
-        }
-      }
-    });
+  responsive: true,
+  plugins: {
+    legend: {
+      labels: { color: "white" }
+    }
+  },
+  scales: {
+    x: {
+      ticks: { color: "#d1d5db" },
+      grid: { color: "rgba(255,255,255,0.08)" }
+    },
+    y: {
+      ticks: { color: "#d1d5db" },
+      grid: { color: "rgba(255,255,255,0.08)" }
+    }
+  }
+}
 
     const years = [...new Set(allSeasonRows.map(row => row.year))].sort((a, b) => b - a);
 
