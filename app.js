@@ -65,6 +65,7 @@ Promise.all([
     const years = [...new Set(allSeasonRows.map(row => row.year))].sort((a, b) => b - a);
 
     yearSelect.innerHTML = "";
+
     years.forEach(year => {
       const option = document.createElement("option");
       option.value = year;
