@@ -2,68 +2,352 @@
   "allTimeStandings": [
     {
       "rank": 1,
-      "team": "Shiva",
-      "record": "102-58",
-      "note": "Replace with your exact real all-time record."
+      "team": "8Joeey",
+      "record": "50-27",
+      "note": "PF: 9772.02 | PA: 9182.68"
     },
     {
       "rank": 2,
-      "team": "Dak",
-      "record": "97-63",
-      "note": "Replace with your exact real all-time record."
+      "team": "Tmoss80",
+      "record": "41-36",
+      "note": "PF: 9470.14 | PA: 9624.82"
     },
     {
       "rank": 3,
-      "team": "Ty",
-      "record": "94-66",
-      "note": "Replace with your exact real all-time record."
+      "team": "caseybohannan3",
+      "record": "40-37",
+      "note": "PF: 9853.32 | PA: 9316.20"
     },
     {
       "rank": 4,
-      "team": "Will",
-      "record": "90-70",
-      "note": "Replace with your exact real all-time record."
+      "team": "wesste3025606",
+      "record": "38-39",
+      "note": "PF: 9893.82 | PA: 9791.24"
+    },
+    {
+      "rank": 5,
+      "team": "Tyler Will1188",
+      "record": "37-40",
+      "note": "PF: 9708.24 | PA: 9437.08"
+    },
+    {
+      "rank": 6,
+      "team": "fordfe9134001",
+      "record": "37-40",
+      "note": "PF: 9043.74 | PA: 9261.38"
+    },
+    {
+      "rank": 7,
+      "team": "jmhoyt6716044",
+      "record": "33-44",
+      "note": "PF: 8847.04 | PA: 9442.48"
+    },
+    {
+      "rank": 8,
+      "team": "Alex always Wins",
+      "record": "32-45",
+      "note": "PF: 9046.98 | PA: 9579.42"
     }
   ],
   "yearlyStandings": {
-    "2024": [
+    "2025": [
       {
         "rank": 1,
-        "team": "Shiva",
-        "record": "10-4",
-        "note": "Replace with your real 2024 result."
+        "team": "8Joeey",
+        "record": "11-2",
+        "note": "Gods Plan.Always | Seed 1"
       },
       {
         "rank": 2,
-        "team": "Dak",
-        "record": "9-5",
-        "note": "Replace with your real 2024 result."
+        "team": "caseybohannan3",
+        "record": "9-4",
+        "note": "Taylor Gang | Seed 2"
       },
       {
         "rank": 3,
-        "team": "Ty",
-        "record": "8-6",
-        "note": "Replace with your real 2024 result."
+        "team": "wesste3025606",
+        "record": "6-7",
+        "note": "Bucky Charms | Seed 3"
+      },
+      {
+        "rank": 4,
+        "team": "jmhoyt6716044",
+        "record": "6-7",
+        "note": "First-Down Flounders | Seed 4"
+      },
+      {
+        "rank": 5,
+        "team": "fordfe9134001",
+        "record": "6-7",
+        "note": "The Paper Chasers | Seed 5"
+      },
+      {
+        "rank": 6,
+        "team": "Tyler Will1188",
+        "record": "5-8",
+        "note": "NACUA MATATA | Seed 6"
+      },
+      {
+        "rank": 7,
+        "team": "Alex always Wins",
+        "record": "5-8",
+        "note": "Rectum Spectrum | Seed 7"
+      },
+      {
+        "rank": 8,
+        "team": "Tmoss80",
+        "record": "4-9",
+        "note": "Bobby Bouches Qaulity H2O | Seed 8"
+      }
+    ],
+    "2024": [
+      {
+        "rank": 1,
+        "team": "jmhoyt6716044",
+        "record": "10-3",
+        "note": "The Shoulda Beens | Seed 1"
+      },
+      {
+        "rank": 2,
+        "team": "wesste3025606",
+        "record": "9-4",
+        "note": "Breeces Pieces | Seed 2"
+      },
+      {
+        "rank": 3,
+        "team": "fordfe9134001",
+        "record": "7-6",
+        "note": "The Paper Chasers | Seed 3"
+      },
+      {
+        "rank": 4,
+        "team": "8Joeey",
+        "record": "6-7",
+        "note": "Gods Plan.Always | Seed 4"
+      },
+      {
+        "rank": 5,
+        "team": "Alex always Wins",
+        "record": "6-7",
+        "note": "Rectum Spectrum | Seed 5"
+      },
+      {
+        "rank": 6,
+        "team": "caseybohannan3",
+        "record": "5-8",
+        "note": "Taylor Gang | Seed 6"
+      },
+      {
+        "rank": 7,
+        "team": "Tmoss80",
+        "record": "5-8",
+        "note": "Bobby Bouches Qaulity H2O | Seed 7"
+      },
+      {
+        "rank": 8,
+        "team": "Tyler Will1188",
+        "record": "4-9",
+        "note": "Not Sacko | Seed 8"
       }
     ],
     "2023": [
       {
         "rank": 1,
-        "team": "Dak",
-        "record": "11-3",
-        "note": "Replace with your real 2023 result."
+        "team": "Alex always Wins",
+        "record": "8-5",
+        "note": "Rectum Spectrum | Seed 1"
       },
       {
         "rank": 2,
-        "team": "Shiva",
-        "record": "10-4",
-        "note": "Replace with your real 2023 result."
+        "team": "Tmoss80",
+        "record": "8-5",
+        "note": "Bobby Bouches Qaulity H2O | Seed 2"
       },
       {
         "rank": 3,
-        "team": "Ty",
-        "record": "7-7",
-        "note": "Replace with your real 2023 result."
+        "team": "fordfe9134001",
+        "record": "7-6",
+        "note": "The Paper Chasers | Seed 3"
+      },
+      {
+        "rank": 4,
+        "team": "wesste3025606",
+        "record": "6-7",
+        "note": "Javaris JaMarr Javarison-Lamar | Seed 4"
+      },
+      {
+        "rank": 5,
+        "team": "Tyler Will1188",
+        "record": "6-7",
+        "note": "TDs N Beer | Seed 5"
+      },
+      {
+        "rank": 6,
+        "team": "8Joeey",
+        "record": "6-7",
+        "note": "Gods Plan. | Seed 6"
+      },
+      {
+        "rank": 7,
+        "team": "jmhoyt6716044",
+        "record": "6-7",
+        "note": "iBang UrMom69 | Seed 7"
+      },
+      {
+        "rank": 8,
+        "team": "caseybohannan3",
+        "record": "5-8",
+        "note": "Lamborghini Mercy | Seed 8"
+      }
+    ],
+    "2022": [
+      {
+        "rank": 1,
+        "team": "8Joeey",
+        "record": "11-2",
+        "note": "Gods Plan. | Seed 1"
+      },
+      {
+        "rank": 2,
+        "team": "caseybohannan3",
+        "record": "8-5",
+        "note": "Alvin and the Chipmunks | Seed 2"
+      },
+      {
+        "rank": 3,
+        "team": "Tmoss80",
+        "record": "7-6",
+        "note": "Bobby Bouches Qaulity H2O | Seed 3"
+      },
+      {
+        "rank": 4,
+        "team": "Tyler Will1188",
+        "record": "7-6",
+        "note": "TDs N Beer | Seed 4"
+      },
+      {
+        "rank": 5,
+        "team": "fordfe9134001",
+        "record": "6-7",
+        "note": "The Paper Chasers | Seed 5"
+      },
+      {
+        "rank": 6,
+        "team": "wesste3025606",
+        "record": "5-8",
+        "note": "The RunItBacks | Seed 6"
+      },
+      {
+        "rank": 7,
+        "team": "Alex always Wins",
+        "record": "5-8",
+        "note": "Rectum Spectrum | Seed 7"
+      },
+      {
+        "rank": 8,
+        "team": "jmhoyt6716044",
+        "record": "3-10",
+        "note": "City Team Name | Seed 8"
+      }
+    ],
+    "2021": [
+      {
+        "rank": 1,
+        "team": "wesste3025606",
+        "record": "8-5",
+        "note": "Lizard Kings | Seed 1"
+      },
+      {
+        "rank": 2,
+        "team": "8Joeey",
+        "record": "8-5",
+        "note": "Gods Plan. | Seed 2"
+      },
+      {
+        "rank": 3,
+        "team": "Tmoss80",
+        "record": "7-6",
+        "note": "Bobby Bouches Qaulity H2O | Seed 3"
+      },
+      {
+        "rank": 4,
+        "team": "Alex always Wins",
+        "record": "7-6",
+        "note": "Rectum Spectrum | Seed 4"
+      },
+      {
+        "rank": 5,
+        "team": "caseybohannan3",
+        "record": "7-6",
+        "note": "Don Julio Jones | Seed 5"
+      },
+      {
+        "rank": 6,
+        "team": "Tyler Will1188",
+        "record": "6-7",
+        "note": "Super Comeback SZN | Seed 6"
+      },
+      {
+        "rank": 7,
+        "team": "jmhoyt6716044",
+        "record": "5-8",
+        "note": "YOUR SHIVAVCHAMP | Seed 7"
+      },
+      {
+        "rank": 8,
+        "team": "fordfe9134001",
+        "record": "4-9",
+        "note": "The Paper Chasers | Seed 8"
+      }
+    ],
+    "2020": [
+      {
+        "rank": 1,
+        "team": "Tmoss80",
+        "record": "10-2",
+        "note": "Baby Jesus | Seed 1"
+      },
+      {
+        "rank": 2,
+        "team": "Tyler Will1188",
+        "record": "9-3",
+        "note": "TDs N Beer | Seed 2"
+      },
+      {
+        "rank": 3,
+        "team": "8Joeey",
+        "record": "8-4",
+        "note": "Gods Plan. | Seed 3"
+      },
+      {
+        "rank": 4,
+        "team": "fordfe9134001",
+        "record": "7-5",
+        "note": "The Paper Chasers | Seed 4"
+      },
+      {
+        "rank": 5,
+        "team": "caseybohannan3",
+        "record": "6-6",
+        "note": "Don Julio Jones 1942 | Seed 5"
+      },
+      {
+        "rank": 6,
+        "team": "wesste3025606",
+        "record": "4-8",
+        "note": "Lizard Kings | Seed 6"
+      },
+      {
+        "rank": 7,
+        "team": "jmhoyt6716044",
+        "record": "3-9",
+        "note": "Sore Ballz | Seed 7"
+      },
+      {
+        "rank": 8,
+        "team": "Alex always Wins",
+        "record": "1-11",
+        "note": "Rectum Spectrum | Seed 8"
       }
     ]
   }
