@@ -1,0 +1,35 @@
+[
+  {
+    "year": 2024,
+    "week": 1,
+    "team1": "Shiva",
+    "team2": "Dak",
+    "team1Score": 128.4,
+    "team2Score": 119.7,
+    "winner": "Shiva",
+    "loser": "Dak",
+    "playoff": false
+  },
+  {
+    "year": 2024,
+    "week": 9,
+    "team1": "Dak",
+    "team2": "Shiva",
+    "team1Score": 141.2,
+    "team2Score": 132.8,
+    "winner": "Dak",
+    "loser": "Shiva",
+    "playoff": false
+  },
+  {
+    "year": 2023,
+    "week": 4,
+    "team1": "Shiva",
+    "team2": "Ty",
+    "team1Score": 122.6,
+    "team2Score": 118.3,
+    "winner": "Shiva",
+    "loser": "Ty",
+    "playoff": false
+  }
+]
