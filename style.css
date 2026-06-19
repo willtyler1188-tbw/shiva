@@ -331,12 +331,14 @@ li:last-child {
     grid-column: auto;
   }
 
-  .panel-header,
+  .panel-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .headtohead-controls,
   .headtohead-summary {
     grid-template-columns: 1fr;
-    flex-direction: column;
-    align-items: stretch;
   }
 
   .chart-wrap {
