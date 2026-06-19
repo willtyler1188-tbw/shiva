@@ -26,12 +26,8 @@
           <h2>All Time Standings</h2>
         </div>
       </div>
-
-      <ol>
-        <li><strong>Replace this list</strong> with your real all-time standings.</li>
-        <li>Example: Shiva — 102-58</li>
-        <li>Example: Dak — 97-63</li>
-        <li>Example: Ty — 94-66</li>
+      <ol id="allTimeStandingsList">
+        <li>Loading all-time standings...</li>
       </ol>
     </section>
 
@@ -44,19 +40,12 @@
 
         <div class="select-wrap">
           <label for="seasonSelect">Season</label>
-          <select id="seasonSelect">
-            <option>2024</option>
-            <option>2023</option>
-            <option>2022</option>
-          </select>
+          <select id="seasonSelect"></select>
         </div>
       </div>
 
-      <ol>
-        <li><strong>Replace this list</strong> with your selected season standings.</li>
-        <li>Example: 1. Shiva</li>
-        <li>Example: 2. Dak</li>
-        <li>Example: 3. Ty</li>
+      <ol id="yearlyStandingsList">
+        <li>Loading yearly standings...</li>
       </ol>
     </section>
 
@@ -64,7 +53,7 @@
       <div class="panel-header">
         <div>
           <p class="panel-kicker">Visual trends</p>
-          <h2>League Chart</h2>
+          <h2>All-Time Wins</h2>
         </div>
       </div>
 
@@ -146,53 +135,13 @@
   </main>
 
   <script>
-    const ctx = document.getElementById("leagueChart");
-
-    new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: ["Shiva", "Dak", "Ty"],
-        datasets: [{
-          label: "Example Wins",
-          data: [102, 97, 94],
-          backgroundColor: [
-            "rgba(125, 211, 252, 0.65)",
-            "rgba(251, 191, 36, 0.65)",
-            "rgba(74, 222, 128, 0.65)"
-          ],
-          borderColor: [
-            "rgba(125, 211, 252, 1)",
-            "rgba(251, 191, 36, 1)",
-            "rgba(74, 222, 128, 1)"
-          ],
-          borderWidth: 1.5
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            labels: {
-              color: "#f8fafc"
-            }
-          }
-        },
-        scales: {
-          x: {
-            ticks: { color: "#f8fafc" },
-            grid: { color: "rgba(255,255,255,0.08)" }
-          },
-          y: {
-            beginAtZero: true,
-            ticks: { color: "#f8fafc" },
-            grid: { color: "rgba(255,255,255,0.08)" }
-          }
-        }
-      }
-    });
-
+    let siteData = null;
     let headToHeadData = [];
+    let leagueChart = null;
+
+    const allTimeStandingsList = document.getElementById("allTimeStandingsList");
+    const yearlyStandingsList = document.getElementById("yearlyStandingsList");
+    const seasonSelect = document.getElementById("seasonSelect");
 
     const teamASelect = document.getElementById("teamASelect");
     const teamBSelect = document.getElementById("teamBSelect");
@@ -204,9 +153,123 @@
     const marginText = document.getElementById("marginText");
     const lastMeetingText = document.getElementById("lastMeetingText");
 
+    async function loadSiteData() {
+      try {
+        const response = await fetch("./site-data.json");
+        if (!response.ok) throw new Error("Could not load site-data.json");
+        siteData = await response.json();
+
+        renderAllTimeStandings(siteData.allTimeStandings || []);
+        populateSeasonDropdown(siteData.yearlyStandings || {});
+        renderYearlyStandings(seasonSelect.value);
+        renderChart(siteData.allTimeStandings || []);
+      } catch (error) {
+        allTimeStandingsList.innerHTML = "<li>Could not load site data.</li>";
+        yearlyStandingsList.innerHTML = "<li>Could not load yearly standings.</li>";
+      }
+    }
+
+    function renderAllTimeStandings(data) {
+      if (!data.length) {
+        allTimeStandingsList.innerHTML = "<li>No all-time standings found.</li>";
+        return;
+      }
+
+      allTimeStandingsList.innerHTML = data.map(team => `
+        <li>
+          <strong>${team.rank}. ${team.team}</strong> — ${team.record}
+          ${team.note ? `<br><span>${team.note}</span>` : ""}
+        </li>
+      `).join("");
+    }
+
+    function populateSeasonDropdown(yearlyData) {
+      const years = Object.keys(yearlyData).sort((a, b) => Number(b) - Number(a));
+      seasonSelect.innerHTML = years.map(year => `<option value="${year}">${year}</option>`).join("");
+
+      seasonSelect.addEventListener("change", () => {
+        renderYearlyStandings(seasonSelect.value);
+      });
+    }
+
+    function renderYearlyStandings(year) {
+      if (!siteData || !siteData.yearlyStandings || !siteData.yearlyStandings[year]) {
+        yearlyStandingsList.innerHTML = "<li>No yearly standings found.</li>";
+        return;
+      }
+
+      yearlyStandingsList.innerHTML = siteData.yearlyStandings[year].map(team => `
+        <li>
+          <strong>${team.rank}. ${team.team}</strong> — ${team.record}
+          ${team.note ? `<br><span>${team.note}</span>` : ""}
+        </li>
+      `).join("");
+    }
+
+    function renderChart(data) {
+      const ctx = document.getElementById("leagueChart");
+      const labels = data.map(team => team.team);
+      const wins = data.map(team => Number(String(team.record).split("-")[0]) || 0);
+
+      if (leagueChart) {
+        leagueChart.destroy();
+      }
+
+      leagueChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [{
+            label: "Wins",
+            data: wins,
+            backgroundColor: [
+              "rgba(125, 211, 252, 0.65)",
+              "rgba(251, 191, 36, 0.65)",
+              "rgba(74, 222, 128, 0.65)",
+              "rgba(244, 114, 182, 0.65)",
+              "rgba(192, 132, 252, 0.65)",
+              "rgba(248, 113, 113, 0.65)"
+            ],
+            borderColor: [
+              "rgba(125, 211, 252, 1)",
+              "rgba(251, 191, 36, 1)",
+              "rgba(74, 222, 128, 1)",
+              "rgba(244, 114, 182, 1)",
+              "rgba(192, 132, 252, 1)",
+              "rgba(248, 113, 113, 1)"
+            ],
+            borderWidth: 1.5
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: {
+                color: "#f8fafc"
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: "#f8fafc" },
+              grid: { color: "rgba(255,255,255,0.08)" }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: { color: "#f8fafc" },
+              grid: { color: "rgba(255,255,255,0.08)" }
+            }
+          }
+        }
+      });
+    }
+
     async function loadHeadToHeadData() {
       try {
         const response = await fetch("./headtohead.json");
+        if (!response.ok) throw new Error("Could not load headtohead.json");
         headToHeadData = await response.json();
 
         populateTeamDropdowns(headToHeadData);
@@ -224,6 +287,9 @@
     function populateTeamDropdowns(data) {
       const teams = [...new Set(data.flatMap(game => [game.team1, game.team2]))].sort();
 
+      teamASelect.innerHTML = `<option value="">Select Team A</option>`;
+      teamBSelect.innerHTML = `<option value="">Select Team B</option>`;
+
       teams.forEach(team => {
         const optionA = document.createElement("option");
         optionA.value = team;
@@ -239,6 +305,7 @@
 
     function populateYearDropdown(data) {
       const years = [...new Set(data.map(game => game.year))].sort((a, b) => b - a);
+      yearFilter.innerHTML = `<option value="all">All Years</option>`;
 
       years.forEach(year => {
         const option = document.createElement("option");
@@ -348,6 +415,7 @@
     teamBSelect.addEventListener("change", renderHeadToHead);
     yearFilter.addEventListener("change", renderHeadToHead);
 
+    loadSiteData();
     loadHeadToHeadData();
   </script>
 </body>
